@@ -1,7 +1,7 @@
-#Blackjack Game
+## Blackjack Game
 This is an Udemy Python-3-Bootcamp course Milestone Project #2
 
-###Requirements
+#### Requirements
 
 You need to create a simple text-based BlackJack game
 - The game needs to have one player versus an automated dealer.
