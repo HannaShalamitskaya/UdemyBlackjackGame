@@ -1,0 +1,27 @@
+version: 2
+workflows:
+  version: 2
+  test:
+    jobs:
+      - pep8-check
+      - unit-tests-run
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6
+    steps:
+      - checkout
+  pep8-check:
+    docker:
+      - image: circleci/python:3.6
+    steps:
+      - checkout
+      - run: sudo pip install tox
+      - run: tox -epep8
+  unit-tests-run:
+    docker:
+      - image: circleci/python:3.6
+    steps:
+      - checkout
+      - run: sudo pip install tox
+      - run: tox -eunit_tests
