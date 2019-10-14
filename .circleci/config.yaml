@@ -1,6 +1,6 @@
-version: 1
+version: 2
 workflows:
-  version: 1
+  version: 2
   test:
     jobs:
       - test-pep8
